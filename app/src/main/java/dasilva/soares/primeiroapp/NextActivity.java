@@ -12,19 +12,19 @@ public class NextActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //exibe os elementos na tela do usuário
+        //exibe os elementos na tela do usuario
         setContentView(R.layout.activity_next);
 
-        //recebe a intenção da classe Main
+        //recebe a intencao originaria da tela
         Intent i = getIntent();
 
-        //cria a variável "texto" que recebe o texto digitado pelo usuário através da intent
+        //cria a variavel "texto" que recebe o texto digitado pelo usuario atraves da intent
         String texto = i.getStringExtra("texto");
 
-        //liga o id "tvTexto" para o texto digitado pelo usuário
+        //liga o id "tvTexto" para o texto digitado pelo usuario
         TextView tvTexto = findViewById(R.id.tvTexto);
 
-        //seta o texto exibido como o texto do usuário
+        //seta o texto exibido como o texto do usuario
         tvTexto.setText(texto);
     }
 }

@@ -14,31 +14,31 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //renderiza os elementos na tela
+        //renderiza os elementos na tela a partir do arquivo de layout
         setContentView(R.layout.activity_main);
 
-        //conecta o id "btnEnviar" ao botão da interface do usuário
+        //conecta o id "btnEnviar" ao botao da interface do usuario
         Button btnEnviar = findViewById(R.id.btnEnviar);
 
-        //liga o "listener" do botão "btnEnviar" à função OnClick
+        //liga o "listener" do botao "btnEnviar" a funcao OnClick
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
-            //função onClick
+            //funcao onClick
             public void onClick(View v) {
 
-                //recebe o texto digitado pelo usuário no campo "etDigiteAqui'
+                //recebe o texto digitado pelo usuario no campo "etDigiteAqui'
                 EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);
 
-                //converte o texto digitado pelo usuário em String
+                //converte o texto digitado pelo usuario em String
                 String textoDigitado = etDigiteAqui.getText().toString();
 
-                //cria uma intenção ligando as duas telas
+                //cria uma intencao de navegar para a proxima tela
                 Intent i = new Intent(MainActivity.this, NextActivity.class);
 
-                //dita que o texto exibido na próxima tela seja o mesmo do recebido pelo usuário
+                //envia o texto dentro da intencao para enviar para a proxima tela
                 i.putExtra("texto", textoDigitado);
 
-//              inicia a próxima tela a partir da intenção criada
+                //inicia a próxima tela a partir da intencao criada
                 startActivity(i);
 
             }
